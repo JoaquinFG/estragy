@@ -7,8 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { DataService } from './data.service';
-import { TableComponent } from './table/table.component';
+import { DataService } from './services/data/data.service';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
