@@ -5,39 +5,4 @@
 />
 <h2>Prueba Técnica Ángular y BD</h2>
 
-<div>
-  <table mat-table>
-    <thead>
-      <tr>
-        <th>
-          <button
-            mat-raised-button
-            (click)="reloadButton()"
-            class="botonCargar"
-          >
-            Cargar nuevos Paises
-          </button>
-        </th>
-        <th>
-          <button mat-raised-button (click)="sortByCountry()">
-            Ordenar por Pais ↓
-          </button>
-        </th>
-        <th>
-          <button mat-raised-button (click)="sortByCity()">
-            Ordenar por Capital ↓
-          </button>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let post of posts">
-        <td class="flag">
-          <img src="{{ post.flag }}" alt="bandera" />
-        </td>
-        <td>{{ post.name }}</td>
-        <td>{{ post.capital }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<app-table></app-table>
