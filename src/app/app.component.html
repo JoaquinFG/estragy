@@ -1,6 +1,20 @@
-<div *ngFor="let post of posts">
-  <h3>{{post.name}}</h3>
-  <h5>{{post.capital}}</h5>
-  <img src="{{post.flag}}" alt="bandera" width="100px">
-  <hr>
+<button mat-button color="primary" (click)="reloadButton()">Cargar Paises</button>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th><button mat-button color="accent" (click)="sortByCountry()">Pais ↓</button></th>
+        <th><button mat-button color="accent" (click)="sortByCity()">Capital ↓</button></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts">
+        <td><img src="{{post.flag}}" alt="bandera" width="50px" max-height="30px"></td>
+        <td>{{post.name}}</td>
+        <td>{{post.capital}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

@@ -25,12 +25,20 @@ export class AppComponent {
     for (let i=0; i<10; i++) {
       var num = getRandomArbitrary(0, data.length);
       countries.push(data[num]);
+      console.log(num)
     }
     return countries
   }
 
-  clickButton(){
-    alert("Hola")
+  reloadButton(){
+    
   }
 
+  sortByCountry(){  
+    
+  }
+
+  sortByCity(){ 
+
+  }
 }
