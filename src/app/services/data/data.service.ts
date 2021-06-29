@@ -11,6 +11,9 @@ export class DataService {
   }
 
   getData(){
-    return this.httpClient.get('https://restcountries.eu/rest/v2/all');
+    return this.httpClient.get(
+      'https://restcountries.eu/rest/v2/all?fields=name;capital;flag'
+    );
   }
+
 }

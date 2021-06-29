@@ -1,3 +1,5 @@
+<button class="btn" (click)="save()">Guardar datos</button>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -7,12 +9,20 @@
         </button>
       </th>
       <th>
-        <button class="btn btn-block" type="button" (click)="sortByCountryButton()">
+        <button
+          class="btn btn-block"
+          type="button"
+          (click)="sortByCountryButton()"
+        >
           Ordenar por Pais ↓
         </button>
       </th>
       <th>
-        <button class="btn btn-block" type="button" (click)="sortByCityButton()">
+        <button
+          class="btn btn-block"
+          type="button"
+          (click)="sortByCityButton()"
+        >
           Ordenar por Capital ↓
         </button>
       </th>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../services/data/data.service';
+import { SaveCountriesService } from '../../services/saveCountries/save-countries.service';
 
 @Component({
   selector: 'app-table',
@@ -9,7 +10,10 @@ import { DataService } from '../../services/data/data.service';
 export class TableComponent {
   posts: any = [];
 
-  constructor(private dataService: DataService) {
+  constructor(
+    private dataService: DataService,
+    private saveCountries: SaveCountriesService
+  ) {
     this.getTenCountries();
   }
 
@@ -51,5 +55,9 @@ export class TableComponent {
       }
       return 0;
     });
+  }
+
+  save() {
+    this.saveCountries.saveCountries(this.posts);
   }
 }
