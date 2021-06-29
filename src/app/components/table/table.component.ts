@@ -58,6 +58,11 @@ export class TableComponent {
   }
 
   save() {
-    this.saveCountries.saveCountries(this.posts);
+    this.saveCountries.saveCountries(this.posts).then(res=>{
+      alert("Datos guardados.")
+    }).catch(error=>{
+      alert("Error al guardar.")
+    });
+
   }
 }

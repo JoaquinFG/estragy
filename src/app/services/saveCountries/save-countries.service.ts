@@ -1,29 +1,32 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment'
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SaveCountriesService {
+  constructor() {}
 
-  constructor() { }
-  
-  saveCountries(country: any){
+  saveCountries(country: any) {
+    return new Promise(function (resolve, reject) {
+      var countryString = JSON.stringify(country);
+      var formdata = new FormData();
+      formdata.append('country', countryString);
 
-    var countryString = JSON.stringify(country);
-    var formdata = new FormData();
-    formdata.append('country', countryString);
+      var requestOptions: any = {
+        method: 'POST',
+        body: formdata,
+        redirect: 'follow',
+      };
 
-    var requestOptions: any = {
-      method: 'POST',
-      body: formdata,
-      redirect: 'follow',
-    };
-
-    fetch('http://localhost/countries/savecountries.php', requestOptions)
-      .then((response) => response.text())
-      .then((result) => console.log(result))
-      .catch((error) => console.log('error', error));
-    console.log(country)
+      fetch(environment.apiPhp, requestOptions)
+        .then((response) => response.text())
+        .then((result) => {
+          resolve(true);
+        })
+        .catch((error) => {
+          reject(false);
+        });
+    });
   }
-
 }
