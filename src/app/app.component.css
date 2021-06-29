@@ -4,3 +4,15 @@ table{
     padding: 5%;
     border-radius: 1%;
 }
+.flag{
+    text-align: center;
+}
+.flag img{
+    width: 50px;
+    max-height: 30px;
+}
+button{
+    margin-bottom: 5%;
+    background: #E59135;
+    color: white;
+}

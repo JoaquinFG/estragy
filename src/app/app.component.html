@@ -12,34 +12,28 @@
         <th>
           <button
             mat-raised-button
-            color="primary"
             (click)="reloadButton()"
             class="botonCargar"
           >
-            Cargar Paises
+            Cargar nuevos Paises
           </button>
         </th>
         <th>
-          <button mat-raised-button color="warn" (click)="sortByCountry()">
-            Pais ↓
+          <button mat-raised-button (click)="sortByCountry()">
+            Ordenar por Pais ↓
           </button>
         </th>
         <th>
-          <button mat-raised-button color="warn" (click)="sortByCity()">
-            Capital ↓
+          <button mat-raised-button (click)="sortByCity()">
+            Ordenar por Capital ↓
           </button>
         </th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let post of posts">
-        <td>
-          <img
-            src="{{ post.flag }}"
-            alt="bandera"
-            width="50px"
-            max-height="30px"
-          />
+        <td class="flag">
+          <img src="{{ post.flag }}" alt="bandera" />
         </td>
         <td>{{ post.name }}</td>
         <td>{{ post.capital }}</td>
