@@ -9,11 +9,15 @@ import { AppComponent } from './app.component';
 
 import { DataService } from './services/data/data.service';
 import { TableComponent } from './components/table/table.component';
+import { AlertComponent } from './components/alerts/alert/alert.component';
+import { AlertErrorComponent } from './components/alerts/alert-error/alert-error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
+    AlertComponent,
+    AlertErrorComponent,
   ],
   imports: [
     BrowserModule,

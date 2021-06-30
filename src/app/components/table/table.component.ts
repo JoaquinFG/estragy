@@ -10,6 +10,9 @@ import { SaveCountriesService } from '../../services/saveCountries/save-countrie
 export class TableComponent {
   posts: any = [];
 
+  visible: any;
+  visibleError: any;
+
   constructor(
     private dataService: DataService,
     private saveCountries: SaveCountriesService
@@ -58,11 +61,15 @@ export class TableComponent {
   }
 
   save() {
-    this.saveCountries.saveCountries(this.posts).then(res=>{
-      alert("Datos guardados.")
-    }).catch(error=>{
-      alert("Error al guardar.")
-    });
-
+    this.saveCountries
+      .saveCountries(this.posts)
+      .then((res) => {
+        this.visible = true;
+        setTimeout(() => {this.visible = false;}, 3000);
+      })
+      .catch((error) => {
+        this.visibleError = true;
+        setTimeout(() => {this.visibleError = false;}, 3000);
+      });
   }
 }
