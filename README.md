@@ -52,3 +52,7 @@ ALTER TABLE `paises`
   ADD PRIMARY KEY (`name`);
 COMMIT;
 
+# php
+
+Poner carpeta 'countries' en carpeta xampp/htdocs 
+
