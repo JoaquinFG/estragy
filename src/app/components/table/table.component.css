@@ -1,0 +1,16 @@
+table{
+    background: white;
+    color: #23282e;
+    border-radius: 1%;
+}
+.flag{
+    text-align: center;
+}
+.flag img{
+    width: 50px;
+    height: 25px;
+}
+button{
+    background: #E59135;
+    color: white;
+}

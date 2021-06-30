@@ -25,3 +25,30 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+---------------------------------------------
+# Prueba Técnica sStragy
+
+https://github.com/JoaquinFG/estragy.git
+
+# Instalar todas las dependencias:
+
+npm i
+
+# Crear base de datos
+
+-- Base de datos: `countries`
+--
+-- Estructura de tabla para la tabla `paises`
+--
+
+CREATE TABLE `paises` (
+  `name` varchar(100) NOT NULL,
+  `capital` varchar(100) DEFAULT NULL,
+  `flag` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `paises`
+  ADD PRIMARY KEY (`name`);
+COMMIT;
+
